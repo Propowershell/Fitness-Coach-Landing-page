@@ -1,112 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Coach | Transform Your Body & Life</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Loss Coach Landing Page | Stop Losing Clients in Instagram DMs</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-                url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1920&h=1080&fit=crop') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        .hero-content {
-            max-width: 800px;
-        }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
 
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
+/* HERO */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1920&h=1080&fit=crop') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
+.hero-content {
+  max-width: 850px;
+}
 
-        /* Toggle Switch */
-        .toggle-container {
-            display: inline-flex;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            padding: 8px;
-            margin-bottom: 40px;
-        }
+.hero-label {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-        .toggle-option {
-            padding: 15px 35px;
-            border-radius: 40px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 600;
-            font-size: 1rem;
-        }
+.hero h1 {
+  font-size: 3.4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
 
-        .toggle-option.active {
-            background: white;
-            color: #1a1a1a;
-        }
+.hero p {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  font-weight: 300;
+  line-height: 1.5;
+}
 
-        .toggle-option:not(.active) {
-            color: rgba(255,255,255,0.7);
-        }
+/* CTA */
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25D366;
+  color: white;
+  padding: 18px 48px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #25D366;
-            color: white;
-            padding: 20px 50px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 700;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
-        }
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+}
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
-        }
+/* SECTIONS */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        /* Problem Section */
-        .problem-section {
-            background: #f8f9fa;
-            padding: 100px 20px;
-        }
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 15px;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #666;
+  margin-bottom: 55px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+/* PROBLEM AGITATION */
+.problem-section {
+  background: #fff;
+  padding: 100px 20px;
+}
+
+.problem-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.problem-item {
+  background: #f8f9fa;
+  padding: 30px 40px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ff4757;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.problem-item strong {
+  color: #ff4757;
+  font-weight: 700;
+}
+
+/* REFRAME */
+.reframe-section {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.reframe-box {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 60px;
+  border-radius: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.reframe-box h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.reframe-box p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* SOLUTION */
+.solution-section {
+  background: #f8f9fa;
+  padding: 100px 20px;
+}
+
+.solution-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.solution-content h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+
+.solution-content p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+/* WHAT IT DOES */
+.benefits-section {
+  padding: 100px 20px;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.benefit-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  border-top: 4px solid #25D366;
+}
+
+.benefit-card i {
+  font-size: 2.5rem;
+  color: #25D366;
+  margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.benefit-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* HOW IT WORKS */
+.process-section {
+  background: #f8f9fa;
+  padding: 100px 20px;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  text-align: center;
+}
+
+.step-number {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 auto 25px;
+}
+
+.step h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.step p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* FINAL CTA */
+.final-cta {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.final-cta h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.final-cta p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.4rem; }
+  .hero p { font-size: 1.1rem; }
+  .section-title { font-size: 2rem; }
+  .reframe-box h2 { font-size: 2rem; }
+  .reframe-box { padding: 40px 30px; }
+  .problem-item { padding: 25px 30px; font-size: 1.05rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="hero-label">For Online Weight Loss Coaches</div>
+
+    <h1>Stop Answering the Same Questions in Instagram DMs</h1>
+    <p>You're getting DMs. Sending prices. Explaining your program. And watching prospects disappear.<br><strong>This page pre-sells your coaching so leads come ready to pay.</strong></p>
+
+    <a href="https://wa.me/2349161727649?text=Hi%2C%20I%27m%20a%20weight%20loss%20coach%20and%20I%27m%20tired%20of%20losing%20clients%20in%20DMs" class="cta-button">
+      <i class="fab fa-whatsapp"></i>
+      <span>Get Your Free Funnel Review</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- PROBLEM AGITATION -->
+<section class="problem-section">
+<div class="container">
+
+<h2 class="section-title">Sound Familiar?</h2>
+<p class="section-subtitle">You're not struggling to get DMs. You're struggling to turn them into paying weight loss clients.</p>
+
+<div class="problem-list">
+
+<div class="problem-item">
+Someone DMs: <strong>"How much is your coaching?"</strong><br>
+You send the price. They vanish.
+</div>
+
+<div class="problem-item">
+You explain your weight loss program in detail.<br>
+They say <strong>"I'll think about it."</strong> They never come back.
+</div>
+
+<div class="problem-item">
+You waste hours typing the same responses.<br>
+<strong>"What's included?" "Do you offer meal plans?" "How long does it take?"</strong>
+</div>
+
+<div class="problem-item">
+You lower your price to close them.<br>
+They still don't commit.
+</div>
+
+<div class="problem-item">
+Meanwhile, you're working for free in DMs instead of coaching actual clients.
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- REFRAME -->
+<section class="reframe-section">
+<div class="container">
+<div class="reframe-box">
+
+<h2>Here's the Real Problem</h2>
+<p>Your weight loss coaching isn't the issue.</p>
+<p><strong>The issue is you're trying to sell a transformation in a text conversation.</strong></p>
+<p>When prospects see your price before understanding the value, they ghost. When they don't see proof, they hesitate. When your offer isn't clear, they "think about it."</p>
+<p>Instagram DMs are the worst place to close a client.</p>
+
+</div>
+</div>
+</section>
+
+<!-- SOLUTION -->
+<section class="solution-section">
+<div class="container">
+
+<div class="solution-content">
+<h2>The Solution: A Page That Sells Your Coaching For You</h2>
+
+<p>Instead of explaining everything in DMs, you send prospects to a dedicated landing page built specifically for weight loss coaches.</p>
+
+<p>This page clearly shows what you offer, who it's for, what results they'll get, how it works, and why your price makes sense.</p>
+
+<p><strong>It pre-qualifies and pre-sells them before they ever message you.</strong></p>
+
+<p>So when they do reach out, they're not asking "how much?" — they're asking "when can I start?"</p>
+</div>
+
+</div>
+</section>
+
+<!-- WHAT IT DOES -->
+<section class="benefits-section">
+<div class="container">
+
+<h2 class="section-title">What This Page Does for You</h2>
+<p class="section-subtitle">Built specifically for weight loss coaches who are tired of DM back-and-forth.</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+<i class="fas fa-bullseye"></i>
+<h3>Explains Your Weight Loss Offer Clearly</h3>
+<p>Shows exactly what clients get, how long it takes, and what results to expect — so you stop repeating yourself.</p>
+</div>
+
+<div class="benefit-card">
+<i class="fas fa-shield-alt"></i>
+<h3>Handles Objections Before the DM</h3>
+<p>Answers "Is this for me?" "Will it work?" and "Why is it this price?" upfront.</p>
+</div>
+
+<div class="benefit-card">
+<i class="fas fa-filter"></i>
+<h3>Filters Out Tire-Kickers</h3>
+<p>People who aren't serious about losing weight won't message you. Only committed leads reach out.</p>
+</div>
+
+<div class="benefit-card">
+<i class="fas fa-dollar-sign"></i>
+<h3>Makes Your Price Feel Justified</h3>
+<p>When they see the full transformation, accountability, and support you provide, price becomes less of an issue.</p>
+</div>
+
+<div class="benefit-card">
+<i class="fas fa-user-check"></i>
+<h3>Brings You Ready-to-Buy Clients</h3>
+<p>Prospects come to your DMs educated, interested, and ready to start — not asking basic questions.</p>
+</div>
+
+<div class="benefit-card">
+<i class="fas fa-clock"></i>
+<h3>Saves You Hours Every Week</h3>
+<p>No more copy-pasting the same explanations. This page does the selling while you focus on coaching.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="process-section">
+<div class="container">
+
+<h2 class="section-title">How It Works</h2>
+<p class="section-subtitle">A simple 3-step system that turns Instagram interest into paying weight loss clients.</p>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<h3>Add the Link to Your Bio or DMs</h3>
+<p>When someone asks about your coaching, send them to this page instead of typing everything out.</p>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<h3>They See the Full Picture</h3>
+<p>They learn what you offer, how it works, who it's for, what they'll achieve, and why it's worth the investment.</p>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<h3>They Message You Ready to Pay</h3>
+<p>No more chasing. No more "I'll think about it." Just serious clients ready to commit to their weight loss.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+<div class="container">
+
+<h2>Ready to Stop Losing Clients in DMs?</h2>
+<p>I'll build you a conversion-focused landing page tailored to your weight loss coaching business. Your offers, your prices, your branding — ready to close clients while you sleep.</p>
+
+<a href="https://wa.me/2349161727649?text=Hi%2C%20I%27m%20a%20weight%20loss%20coach%20and%20I%20want%20to%20stop%20losing%20clients%20in%20DMs.%20Let%27s%20talk%20about%20getting%20this%20page%20built." class="cta-button">
+<i class="fab fa-whatsapp"></i>
+<span>Message Me to Get Started</span>
+</a>
+
+</div>
+</section>
+
+</body>
+</html>
         .section-title {
             font-size: 2.5rem;
             font-weight: 800;
